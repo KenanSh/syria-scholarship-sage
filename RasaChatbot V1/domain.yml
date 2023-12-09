@@ -1,0 +1,108 @@
+version: '3.1'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+########################################################################
+intents:
+- affirm
+- bot_challenge
+- country
+- deny
+- stop
+- goodbye
+- greet
+- help
+- out_of_scope
+- scholarship
+- training_opportunity
+- thank
+- request_scholarship_form
+- exchange_program
+- website_info
+- services
+- inform
+########################################################################
+entities:
+- country
+- finance
+########################################################################
+slots:
+  country:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: country
+      conditions:
+      - active_loop: ss_form
+        requested_slot: country
+
+  finance:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: finance
+      conditions:
+      - active_loop: ss_form
+        requested_slot: finance
+########################################################################
+forms:
+  ss_form:
+    required_slots:
+      - country
+      - finance
+########################################################################
+responses:
+  utter_greet:
+  - text: Hey! I'm your Academic Assistant how may i help you
+  utter_goodbye:
+  - text: Bye 👋
+  - text: See ya 👋
+  utter_iamabot:
+  - text: I am a bot but you can rely on me 👍🙂
+  utter_ask_for_need:
+  - text: "what do you want:" 
+    buttons:
+      - title: "Scholarship"
+        payload: "/scholarship"
+      - title: "training opportunity"
+        payload: "/training opportunity"
+      - title: "Exchinging Program(Mobility)"
+        payload: "/exchange program"
+  utter_website_info:
+  - text: "[About us](http://localhost:3000/#about)"
+  utter_website_services:
+  - text: "you can check [Our Services](http://localhost:3000/#Services)"
+  utter_scholarship:
+  - text: "you can check all scholarship in different countries from [here](http://localhost:3000/scholarShip1)"
+  utter_training_opportunity:
+  - text: "you can check different training opportunity from [here](http://localhost:3000/trainingOpp)"
+  utter_exchange_programs:
+  - text: "you can check different student exchange programs 'Mobility' from [here](http://localhost:3000/Student_Exchange)"
+  utter_help:
+  - text: "i can help you find a scholarship suitable in country, finding a suitable training opportunity or find an exchange program suitable for you \n You can ask me things like: \n- find me a scholarship \n- Help me find a training opportunity "
+  utter_out_of_scope:
+  - text: Sorry, I'm not sure how to respond to that 😕 Type 'help' for assistance.
+  utter_welcome:
+  - text: You're welcome! 😊
+  - text: Any time 😊
+
+  utter_ask_country:
+  - text: What country do you want the scholarship for?
+  utter_ask_finance:
+  - text: What is the type of finance?
+    buttons:
+      - title: "fully funded"
+        payload: "/fully funded"
+      - title: "Partial funded"
+        payload: "/Partial funded" 
+      - title: "not funded"
+        payload: "/not funded" 
+  utter_ask_continue:
+  - text: Are you sure you want to stop?
+
+########################################################################
+actions:
+- validate_scholarship_form
+- action_get_link

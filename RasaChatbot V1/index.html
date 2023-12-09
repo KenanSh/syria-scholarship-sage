@@ -1,0 +1,34 @@
+<html>
+    <style>
+        .rw-conversation-container .rw-header{color: #fa7070;}
+        .rw-conversation-container .rw-messages-container .rw-message .rw-client{background-color: #fa7070;}
+
+    </style>
+    <body>
+      <h1>rasa run --enable-api --cors="*"</h1>
+        <script>!(function () {
+            let e = document.createElement("script"),
+              t = document.head || document.getElementsByTagName("head")[0];
+            (e.src =
+              "https://cdn.jsdelivr.net/npm/rasa-webchat@1.x.x/lib/index.js"),
+              // Replace 1.x.x with the version that you want
+              (e.async = !0),
+              (e.onload = () => {
+                window.WebChat.default(
+                  {
+                    initPayload: '/greet',
+                    customData: { language: "en" },
+                    socketUrl: "http://localhost:5005",
+                    title: 'AI Academic assistant',
+                    subtitle: 'lets have a convo',
+                    profileAvatar: "./assets/robot.svg"
+                    // add other props here
+                  },
+                  null
+                );
+              }),
+              t.insertBefore(e, t.firstChild);
+          })();
+          </script>
+    </body>
+</html>

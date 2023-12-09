@@ -1,0 +1,525 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - hey there
+    - good morning
+    - good evening
+    - moin
+    - greetings
+    - Hi
+    - helo
+    - Hi!
+    - Hi'
+    - Hi,
+    - Hi, bot
+    - Hieee
+    - Hieeeeee
+    - Hola
+    - What is up?
+    - whats up?
+    - bonjour
+    - Well hello there ;)
+    - How you doin
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - see ya
+    - Bye bye
+    - bye bye bot
+    - bye for now
+    - farewell
+    - catch you later
+    - cya
+    - good bye
+    - goodbye
+    - see you
+    - ok, bye
+    - ok.bye
+    - take care
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - yes please
+    - yes I would
+    - please do
+    - yup
+    - yep
+    - that's right
+    - indeed
+    - Yes, please
+    - yeah
+    - sure
+    - yes thanks
+    - That would be great
+    - YES
+    - YUP
+    - Yea
+    - Yeah
+    - Yeah sure
+    - Yep
+    - Yep that's fine
+    - Yep!
+    - Yepp
+    - Yes
+    - Yes I do
+    - Yes please
+    - Yes please!
+    - Yes, I accept
+    - that sounds good
+- intent: deny
+  examples: |
+    - no
+    - nope
+    - no thanks
+    - not that one
+    - don't use that
+    - please no
+    - no don't do that
+    - no, use abraham.lincoln@example.com
+    - Neither
+    - Never
+    - Nevermind
+    - No thank you
+    - No, not really.
+    - No, thank you
+    - No.
+    - Nopes
+    - Not really
+    - absolutely not
+    - decline
+    - definitely not
+    - deny
+    - na
+    - nah
+    - nah I'm good
+
+
+- intent: stop
+  examples: |
+    - stop
+    - nevermind
+    - please stop
+    - i want to stop
+    - stop the form
+
+- lookup: country
+  examples: |
+    - Afghanistan
+    - Albania
+    - Algeria
+    - Andorra
+    - Angola
+    - Antigua and Barbuda
+    - Argentina
+    - Armenia
+    - Australia
+    - Austria
+    - Azerbaijan
+    - The Bahamas
+    - Bahrain
+    - Bangladesh
+    - Barbados
+    - Belarus
+    - Belgium
+    - Belize
+    - Benin
+    - Bhutan
+    - Bolivia
+    - Bosnia and Herzegovina
+    - Botswana
+    - Brazil
+    - Brunei
+    - Bulgaria
+    - Burkina Faso
+    - Burundi
+    - Cabo Verde
+    - Cambodia
+    - Cameroon
+    - Canada
+    - Central African Republic
+    - Chad
+    - Chile
+    - China
+    - Colombia
+    - Comoros
+    - Congo
+    - Costa Rica
+    - Croatia
+    - Cuba
+    - Cyprus
+    - Czech Republic
+    - Denmark
+    - Djibouti
+    - Dominica
+    - Dominican Republic
+    - Ecuador
+    - Egypt
+    - El Salvador
+    - Equatorial Guinea
+    - Eritrea
+    - Estonia
+    - Eswatini
+    - Ethiopia
+    - Fiji
+    - Finland
+    - France
+    - Gabon
+    - The Gambia
+    - Georgia
+    - Germany
+    - Ghana
+    - Greece
+    - Grenada
+    - Guatemala
+    - Guinea
+    - Guyana
+    - Haiti
+    - Honduras
+    - Hungary
+    - Iceland
+    - India
+    - Indonesia
+    - Iran
+    - Iraq
+    - Ireland
+    - Italy
+    - Jamaica
+    - Japan
+    - Jordan
+    - Kazakhstan
+    - Kenya
+    - Kiribati
+    - North Korea
+    - South Korea
+    - Kosovo
+    - Kuwait
+    - Kyrgyzstan
+    - Laos
+    - Latvia
+    - Lebanon
+    - Lesotho
+    - Liberia
+    - Libya
+    - Liechtenstein
+    - Lithuania
+    - Luxembourg
+    - Malawi
+    - Malaysia
+    - Maldives
+    - Mali
+    - Malta
+    - Marshall Islands
+    - Mauritania
+    - Mauritius
+    - Mexico
+    - Micronesia
+    - Moldova
+    - Monaco
+    - Mongolia
+    - Montenegro
+    - Morocco
+    - Mozambique
+    - Namibia
+    - Nauru
+    - Nepal
+    - Netherlands
+    - New Zealand
+    - Nicaragua
+    - Niger
+    - Nigeria
+    - North Macedonia
+    - Norway
+    - Oman
+    - Pakistan
+    - Palau
+    - Panama
+    - Papua New Guinea
+    - Paraguay
+    - Peru
+    - Philippines
+    - Poland
+    - Portugal
+    - Qatar
+    - Romania
+    - Russia
+    - Rwanda
+    - Saint Kitts and Nevis
+    - Saint Lucia
+    - Samoa
+    - San Marino
+    - Sao Tome and Principe
+    - Saudi Arabia
+    - Senegal
+    - Serbia
+    - Seychelles
+    - Sierra Leone
+    - Singapore
+    - Slovakia
+    - Slovenia
+    - Solomon Islands
+    - Somalia
+    - South Africa
+    - Spain
+    - Sri Lanka
+    - Sudan
+    - Suriname
+    - Sweden
+    - Switzerland
+    - Syria
+    - Taiwan
+    - Tajikistan
+    - Tanzania
+    - Thailand
+    - Togo
+    - Tonga
+    - Trinidad and Tobago
+    - Tunisia
+    - Turkey
+    - Turkmenistan
+    - Tuvalu
+    - Uganda
+    - Ukraine
+    - United Arab Emirates
+    - United Kingdom
+    - United States
+    - Uruguay
+    - Uzbekistan
+    - Vanuatu
+    - Vatican City
+    - Venezuela
+    - Vietnam
+    - Yemen
+    - Zambia
+    - Zimbabwe
+
+- intent: thank
+  examples: |
+    - thanks!
+    - thank you
+    - thanks a lot
+    - great thanks
+    - appreciate it
+    - cool thanks
+    - Cool. Thanks
+    - Great, thanks
+    - Thank you so much
+    - Thank's!
+    - Thanks bot
+    - Thanks for that
+    - Thanks!
+    - amazing, thanks
+    - cool thank you
+    - cool, thanks
+    - danke
+    - ok thanks
+    - ok thanks!
+    - perfect thank you
+    - thank u
+    - thank you anyways
+    - thanks
+    - thanks a bunch for everything
+    - thanks for the help
+    - thanks you
+    - thankyou
+    - thnks
+    - thx
+    - yes thanks
+    - thanks for your information
+    - thank
+
+- intent: scholarship
+  examples: |
+    - need a scholarship 
+    - need help with finding scholarship 
+    - I can't find a scholarship
+    - need help with scholarship
+    - having issues finding scholarship
+    - find a scholarship 
+    - scholarship
+    - scholarship help please
+    - I'm having so many problems with finding scholarship
+    - Can you find me scholarship?
+    - find me a scholarship
+
+- intent: inform
+  examples: |
+    - need a scholarship in [Russia]{"entity":"country"}
+    - need help with finding scholarship in [United States]{"entity":"country"}
+    - [United Kingdom]{"entity":"country"}
+    - [Spain]{"entity":"country"}
+    - [Ukraine]{"entity":"country"}
+    - [Italy]{"entity":"country"}
+    - [fully funded](finance)
+    - [Partial funded](finance)
+    - [not funded](finance)
+    - i want a scholarship [fully funded](finance)
+    - searching for scholarship [Partial funded](finance)
+    - [not funded](finance) scholarship
+    - i want a scholarship in [Qatar]{"entity":"country"}
+    - searching for scholarship in [Portugal]{"entity":"country"}
+
+
+- intent: training_opportunity
+  examples: |
+    - need a training opportunity
+    - need help with finding training opportunity
+    - I can't find a training opportunity
+    - need help with training opportunity
+    - having issues finding training opportunity
+    - find a training opportunity
+    - training opportunity
+    - training oppertunities
+    - uh training opportunity help please
+    - I'm having so many problems with finding training opportunity
+    - Can you find me training opportunity?
+    - find me a training opportunity
+
+- intent: exchange_program
+  examples: |
+    - need an exchange program
+    - need student mobility
+    - need help with finding exchange program for another university
+    - I can't find a exchange program
+    - need help with exchange program
+    - having issues finding exchange program
+    - find a suitable exchange program
+    - exchange program
+    - student mobility
+    - Can you find me student mobility program?
+    - find me a mobility program
+
+- intent: website_info
+  examples: |
+    - i want to know information about your website
+    - tell me more about website
+    - what about website?
+
+- intent: services
+  examples: |
+    - i want to know information about your website services
+    - what services this website is offering
+    - what about services of this website?
+    - your services
+
+- intent: out_of_scope
+  examples: |
+    - what is the square root of 5
+    - I want to know the weather
+    - what is the meaning of life.
+    - Fridge Isn't Running
+    - my tv isn't working
+    - I want a pizza
+    - my washing machine isn't working
+    - what year is it
+    - order a pizza
+    - I want to order a pizza
+    - what is the weather today
+    - what is the weather
+    - how old are you?
+    - add two plus two
+    - Hdjejene
+    - asd
+    - title
+    - how about the forecast
+    - foolish
+    - joke
+    - Can I get a hamburger?
+    - Can YouTube talk?
+    - Can you call me back ?
+    - Can you give me your datacenter's password
+    - Can you give me your datacenter's password?
+    - Can you make sandwiches?
+    - Can you please send me an uber
+    - do you love me
+    - i hate you
+    - what is your father name?
+- intent: help
+  examples: |
+    - I need help
+    - what can you help me with
+    - can you help me
+    - what can you do
+    - I need some help
+    - help me
+    - can you please help me
+    - problem
+    - big problem
+    - How can you help me
+    - How you help me?
+    - What are my options
+    - What are you able to do?
+    - What can I ask you?
+    - What can I do?
+    - What can you demo
+    - What can you do for me?
+    - What can you do?
+    - What can you tell me?
+    - What do you do
+    - anything els
+    - are there any other options?
+    - can I ask you anything else?
+    - can you do anything else?
+    - can you help me?
+    - come back
+    - cool! can I do something else here?
+    - hello what can you do for me
+    - help
+    - help please
+    - help pls
+    - help?
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - you are a bot right
+    - aren't you a bot
+    - Are you a bot?
+    - are you a BOT
+    - are you a chatbot
+    - are you a rasa bot?
+    - are you a real bot?
+    - are you a robot
+    - are you ai
+    - are you artificial
+    - are you artificial intelligence
+    - are you bot
+    - are you bot?
+    - are you rasa bot?
+    - are you real
+    - are you real lol
+    - are you really a bot
+    - are you robot
+    - are you sure that you're a bot?
+    - bot?
+    - cuz you are a bot
+    - i guess you are a chatbot
+    - oh are you chatbot?
+    - tell me, are you a bot?
+    - what are you, a bot?
+    - you are a robot
+    - you are ai
+    - you are chatbot
+    - you're a bot
+    - you robo
+    - real bot then?
+    - by the way, are you a bot?

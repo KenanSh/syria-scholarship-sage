@@ -1,0 +1,269 @@
+version: "3.1"
+
+stories:
+
+- story: answer out of scope
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+
+- story: thank
+  steps:
+  - intent: thank
+  - action: utter_welcome
+
+- story: website information
+  steps:
+  - intent: website_info
+  - action: utter_website_info
+
+- story: website services
+  steps:
+  - intent: services
+  - action: utter_website_services
+
+- story: problems_1
+  steps:
+  - intent: problem1
+  - action: utter_problem1
+
+- story: problems_2
+  steps:
+  - intent: problem2
+  - action: utter_problem2
+  
+- story: problems_3
+  steps:
+  - intent: problem3
+  - action: utter_problem3
+  
+- story: problems_4
+  steps:
+  - intent: problem4
+  - action: utter_problem4
+  
+- story: problems_5
+  steps:
+  - intent: problem5
+  - action: utter_problem5
+  
+- story: problems_6
+  steps:
+  - intent: problem6
+  - action: utter_problem6
+  
+- story: problems_7
+  steps:
+  - intent: problem_with_practical_part_projects
+  - action: utter_problem7
+  
+- story: problems_8
+  steps:
+  - intent: problem8
+  - action: utter_problem8
+  
+- story: problems_9
+  steps:
+  - intent: problem9
+  - action: utter_problem9
+
+- story: problems_10
+  steps:
+  - intent: problem10
+  - action: utter_problem10
+
+- story: problems_11
+  steps:
+  - intent: problem11
+  - action: utter_problem11
+
+- story: problems_12
+  steps:
+  - intent: problem_with_resources
+  - action: utter_problem12
+
+- story: problems_13
+  steps:
+  - intent: problem13
+  - action: utter_problem13
+
+- story: problems_14
+  steps:
+  - intent: problem14
+  - action: utter_problem14
+
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_for_need
+  - intent: scholarship
+  - action: utter_scholarship
+  - intent: thank
+  - action: utter_welcome
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_for_need
+  - intent: training_opportunity
+  - action: utter_training_opportunity
+  - intent: thank
+  - action: utter_welcome
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_for_need
+  - intent: exchange_program
+  - action: utter_exchange_programs
+  - intent: thank
+  - action: utter_welcome
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+- story: greet + give info
+  steps:
+  - intent: help
+  - action: utter_help
+
+
+
+
+
+
+
+
+# - story: interactive_story_1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - action: utter_ask_for_need
+#   - intent: scholarship
+#   - action: ss_form
+#   - active_loop: ss_form
+#   - slot_was_set:
+#     - requested_slot: country
+#   - slot_was_set:
+#     - country: qatar
+#   - slot_was_set:
+#     - requested_slot: finance
+#   - slot_was_set:
+#     - finance: Partial funded
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_get_link
+#   - intent: thank
+#   - action: utter_welcome
+
+# - story: interactive_story_2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - action: utter_ask_for_need
+#   - intent: inform
+#     entities:
+#     - country: united state
+#   - slot_was_set:
+#     - country: united state
+#   - action: ss_form
+#   - active_loop: ss_form
+#   - slot_was_set:
+#     - requested_slot: finance
+#   - slot_was_set:
+#     - finance: fully funded
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_get_link
+#   - intent: thank
+#   - action: utter_welcome
+
+# - story: interactive_story_3
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - action: utter_ask_for_need
+#   - intent: scholarship
+#   - action: ss_form
+#   - active_loop: ss_form
+#   - slot_was_set:
+#     - requested_slot: country
+#   - slot_was_set:
+#     - country: united kingdom
+#   - slot_was_set:
+#     - requested_slot: finance
+#   - slot_was_set:
+#     - finance: not funded
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_get_link
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+
+
+# - story: interactive_story_4
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - action: utter_ask_for_need
+#   - intent: scholarship
+#   - action: ss_form
+#   - active_loop: ss_form
+#   - slot_was_set:
+#     - requested_slot: country
+#   - intent: bot_challenge
+#   - action: utter_iamabot
+#   - action: ss_form
+#   - slot_was_set:
+#     - requested_slot: country
+#   - slot_was_set:
+#     - country: united state
+#   - slot_was_set:
+#     - requested_slot: finance
+#   - slot_was_set:
+#     - finance: fully funded
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_get_link
+
+
+# - story: training opportunity long
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - action: utter_ask_for_need
+#   - intent: training opportunity
+#   - action: utter_link_for_to
+#   - intent: thank
+#   - action: utter_welcome
+
+# - story: interactive_story_5
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - action: utter_ask_for_need
+#   - intent: scholarship
+#   - action: ss_form
+#   - active_loop: ss_form
+#   - slot_was_set:
+#     - requested_slot: country
+#   - intent: stop
+#   - action: utter_ask_continue
+#   - intent: affirm
+#   - action: action_deactivate_loop
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
