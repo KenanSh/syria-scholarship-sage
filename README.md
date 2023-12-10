@@ -21,7 +21,9 @@ For the navigation task, the NLU is trained on nine general-purpose Arabic sente
 
 Some Testing Scenarios:
 
-1. ![image](https://github.com/KenanSh/syria-scholarship-sage/assets/101220492/80fb0499-3aea-4075-ad20-4f148b92e2c2)
-2. ![image](https://github.com/KenanSh/syria-scholarship-sage/assets/101220492/3945ea69-6bbc-4cb8-8c57-98e39d8bf4ee)
+
+1. ![image](https://github.com/KenanSh/syria-scholarship-sage/assets/101220492/970298ae-ff45-41fb-987b-cfd512d7fda0)
+2. ![image](https://github.com/KenanSh/syria-scholarship-sage/assets/101220492/791127d3-bbf5-44f9-8611-e92670442676)
+
 
 **Note: First version was in English**
